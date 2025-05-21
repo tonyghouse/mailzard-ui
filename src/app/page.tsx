@@ -235,7 +235,7 @@ export default function Home() {
           </div>
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
             {/* <p>© {new Date().getFullYear()} Mailzard. All rights reserved.</p> */}
-              <div>Crafted with ❤️ in UAE 🇦🇪 by Tony Ghouse's team</div>
+              <div>Crafted with ❤️ in UAE 🇦🇪 by Tony Ghouse&apos;s team</div>
           </div>
         </div>
       
