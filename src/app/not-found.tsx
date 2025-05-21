@@ -9,7 +9,7 @@ export default function NotFound() {
         <div className="relative w-full">
           {/* Logo */}
           <div className="flex items-center justify-center mb-8">
-            <PaperPlane className="h-8 w-8 mr-2" />
+              <Mail className="h-6 w-6 mr-2" />
             <span className="text-2xl font-mono tracking-tight">Mailzard</span>
           </div>
           

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Mail, Zap, BarChart, Clock, Settings, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { ReactNode } from "react";
 
 export default function Home() {
   return (
@@ -241,7 +242,13 @@ export default function Home() {
   )
 }
 
-function FeatureCard({ icon, title, description }) {
+interface FeatureCardProps {
+  icon: ReactNode;
+  title: string;
+  description: string;
+}
+
+function FeatureCard({ icon, title, description } : FeatureCardProps) {
   return (
     <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md">
       <div className="mb-4 text-primary">{icon}</div>
