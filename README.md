@@ -1,1 +1,2 @@
-# UI base template
+# Mailzard
+### Marketing and Transactional Emails, Simplified.

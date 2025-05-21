@@ -11,8 +11,8 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-  title: "UI Base Template",
-  description: "",
+  title: "Mailzard",
+  description: "Marketing and Transactional Emails, Simplified.",
 };
 
 export default function RootLayout({
