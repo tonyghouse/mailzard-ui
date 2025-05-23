@@ -1,9 +1,23 @@
+"use client"
 import Link from "next/link"
 import { Mail, Zap, BarChart, Clock, Settings, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
+import { useUser } from "@clerk/nextjs";
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+
+   const { isLoaded, isSignedIn, user } = useUser();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isLoaded && isSignedIn) {
+      router.push("/dashboard");
+    }
+  }, [isLoaded, isSignedIn]);
+
+
   return (
     <div className="min-h-screen bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem]">
       <header className="container mx-auto flex h-20 items-center justify-between px-4">
@@ -26,11 +40,14 @@ export default function Home() {
           </Link>
         </nav>
         <div className="flex items-center space-x-4">
-          <Link href="/login" className="text-gray-600 hover:text-gray-900">
+          <Link href="/sign-in" className="text-gray-600 hover:text-gray-900">
             Log In
           </Link>
+          <Link href={"/sign-up"}>
           <Button>Sign Up</Button>
+          </Link>
         </div>
+
       </header>
 
       <main>
