@@ -20,35 +20,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem]">
-      <header className="container mx-auto flex h-20 items-center justify-between px-4">
-        <div className="flex items-center space-x-2">
-          <Mail className="h-6 w-6" />
-          <span className="text-xl font-medium">Mailzard</span>
-        </div>
-        <nav className="hidden space-x-8 md:flex">
-          <Link href="#features" className="text-gray-600 hover:text-gray-900">
-            Features
-          </Link>
-          <Link href="#templates" className="text-gray-600 hover:text-gray-900">
-            Templates
-          </Link>
-          <Link href="#pricing" className="text-gray-600 hover:text-gray-900">
-            Pricing
-          </Link>
-          <Link href="#docs" className="text-gray-600 hover:text-gray-900">
-            Docs
-          </Link>
-        </nav>
-        <div className="flex items-center space-x-4">
-          <Link href="/sign-in" className="text-gray-600 hover:text-gray-900">
-            Log In
-          </Link>
-          <Link href={"/sign-up"}>
-          <Button>Sign Up</Button>
-          </Link>
-        </div>
-
-      </header>
 
       <main>
         {/* Hero Section */}

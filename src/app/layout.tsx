@@ -5,6 +5,8 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 // import { Geist, Geist_Mono } from "next/font/google";
+// import { Toaster } from "@/components/ui/sonner"
+import Navbar from "@/components/navbar";
 
 import {
   ClerkProvider,
@@ -41,18 +43,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body  className={cn(
+     <ClerkProvider>
+    <html lang="en">
+      <body  className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}>
-        {/* <body
-          className={`${fontSans.variable} min-h-screen bg-background antialiased`}
-        > */}
+         <Navbar/>
           {children}
-        </body>
-      </html>
+          {/* <Toaster /> */}
+          </body>
+    </html>
     </ClerkProvider>
   );
 }
