@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 // import { Geist, Geist_Mono } from "next/font/google";
 // import { Toaster } from "@/components/ui/sonner"
 import Navbar from "@/components/navbar";
+import localFont from "next/font/local";
 
 import {
   ClerkProvider,
@@ -32,6 +33,21 @@ const fontSans = FontSans({
 //   subsets: ["latin"],
 // });
 
+
+
+
+const heming = localFont({
+  src: [
+    {
+      path: "../../public/fonts/HemingVariable.ttf",
+      weight: "100 900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-heming",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Mailzard",
   description: "Marketing and Transactional Emails, Simplified.",
@@ -44,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
      <ClerkProvider>
-    <html lang="en">
+    <html lang="en" className={heming.variable}>
       <body  className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable

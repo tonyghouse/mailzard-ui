@@ -4,6 +4,7 @@
   import { UserButton, useUser } from "@clerk/nextjs"
 
   import { Button } from './ui/button'
+import { Mail } from 'lucide-react'
 
   
 export default function Navbar() {
@@ -13,6 +14,7 @@ export default function Navbar() {
     return (
       <header className="px-4 lg:px-6 h-14 flex items-center">
       <Link className="flex items-end justify-center" href="/">
+         <Mail className="h-5 w-5" />
         <div className="ml-1 text-base font-bold">Mailzard</div>
       </Link>
       <nav className="ml-auto flex gap-4 sm:gap-6">
