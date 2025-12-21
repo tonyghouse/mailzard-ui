@@ -1,50 +1,28 @@
 import "./globals.css";
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
-// const inter = Inter({ subsets: ["latin"] });
-import { Inter as FontSans } from "next/font/google";
+import { Outfit, Geist_Mono, Playfair_Display } from "next/font/google";
 import { cn } from "@/lib/utils";
-// import { Geist, Geist_Mono } from "next/font/google";
-// import { Toaster } from "@/components/ui/sonner"
 import Navbar from "@/components/navbar";
-import localFont from "next/font/local";
+import { ClerkProvider } from "@clerk/nextjs";
 
-import {
-  ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
-
-const fontSans = FontSans({
+/* Main UI font */
+const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
 });
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+/* Mono font (code, ids, logs) */
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
-
-
-
-const heming = localFont({
-  src: [
-    {
-      path: "../../public/fonts/HemingVariable.ttf",
-      weight: "100 900",
-      style: "normal",
-    },
-  ],
-  variable: "--font-heming",
+/* Serif font (optional but elegant for headings / marketing copy) */
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -55,21 +33,23 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-     <ClerkProvider>
-    <html lang="en" className={heming.variable}>
-      <body  className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}>
-         <Navbar/>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased",
+            outfit.variable,
+            geistMono.variable,
+            playfair.variable
+          )}
+        >
           {children}
-          {/* <Toaster /> */}
-          </body>
-    </html>
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
