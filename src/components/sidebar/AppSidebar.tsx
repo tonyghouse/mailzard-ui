@@ -11,6 +11,7 @@ import {
   Menu,
   X,
   ChevronLeft,
+  ContactIcon,
   Mail
 } from "lucide-react";
 import Link from "next/link";
@@ -22,10 +23,10 @@ import { Badge } from "@/components/ui/badge";
 // Using lucide-react icons with clean, geometric designs
 const items = [
   { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
-  { title: "Editor", url: "/editor", icon: FileEdit },
   { title: "Templates", url: "/templates", icon: FileStack },
   { title: "Scheduled Emails", url: "/scheduled-emails", icon: CalendarClock },
   { title: "Failed Emails", url: "/failed-emails", icon: AlertCircle },
+  { title: "Contacts", url: "/contacts", icon: ContactIcon },
   { title: "Analytics", url: "/analytics", icon: BarChart3 },
   { title: "Connect Accounts", url: "/connect-accounts", icon: Cable },
 ];

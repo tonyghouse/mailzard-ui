@@ -1,0 +1,7 @@
+export interface ContactGroup {
+  id: number;
+  name: string;
+  description?: string | null;
+
+  userId: string;
+}
