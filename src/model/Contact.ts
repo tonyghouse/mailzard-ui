@@ -10,3 +10,11 @@ export interface Contact {
 
   userId: string;
 }
+
+
+export interface CreateContactRequest {
+  email: string;
+  firstName?: string;
+  lastName?: string;
+  groupIds: number[];
+}
