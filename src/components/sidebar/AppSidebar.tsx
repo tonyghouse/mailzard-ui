@@ -1,34 +1,21 @@
 "use client";
 
-import {
-  LayoutDashboard,
-  FileEdit,
-  FileStack,
-  CalendarClock,
-  AlertCircle,
-  BarChart3,
-  Cable,
-  Menu,
-  X,
-  ChevronLeft,
-  ContactIcon,
-  Mail
-} from "lucide-react";
+import { House, Cards , Tray , CaretLeft, CalendarBlank ,WarningDiamond , AddressBook ,ChartLine, Plugs} from "@phosphor-icons/react";
+
 import Link from "next/link";
 import { UserButton, useUser } from "@clerk/nextjs";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-// Using lucide-react icons with clean, geometric designs
 const items = [
-  { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
-  { title: "Templates", url: "/templates", icon: FileStack },
-  { title: "Scheduled Emails", url: "/scheduled-emails", icon: CalendarClock },
-  { title: "Failed Emails", url: "/failed-emails", icon: AlertCircle },
-  { title: "Contacts", url: "/contacts", icon: ContactIcon },
-  { title: "Analytics", url: "/analytics", icon: BarChart3 },
-  { title: "Connect Accounts", url: "/connect-accounts", icon: Cable },
+  { title: "Dashboard", url: "/dashboard", icon: House },
+  { title: "Templates", url: "/templates", icon: Cards },
+  { title: "Scheduled Emails", url: "/scheduled-emails", icon: CalendarBlank },
+  { title: "Failed Emails", url: "/failed-emails", icon: WarningDiamond },
+  { title: "Contacts", url: "/contacts", icon: AddressBook },
+  { title: "Analytics", url: "/analytics", icon: ChartLine },
+  { title: "Connect Accounts", url: "/connect-accounts", icon: Plugs },
 ];
 
 export function AppSidebar({ isMobile }: { isMobile?: boolean }) {
@@ -61,7 +48,7 @@ export function AppSidebar({ isMobile }: { isMobile?: boolean }) {
           </Link>
         ) : (
           <div className="w-full flex justify-center">
-            <Mail className="h-5 w-5 text-foreground" />
+            <Tray className="h-5 w-5 text-foreground" />
           </div>
         )}
 
@@ -70,7 +57,7 @@ export function AppSidebar({ isMobile }: { isMobile?: boolean }) {
             onClick={() => setIsCollapsed(!isCollapsed)}
             className="p-1.5 hover:bg-muted transition-colors"
           >
-            <ChevronLeft className="h-4 w-4 text-muted-foreground" />
+            <CaretLeft className="h-4 w-4 text-muted-foreground" />
           </button>
         )}
       </div>
@@ -81,7 +68,7 @@ export function AppSidebar({ isMobile }: { isMobile?: boolean }) {
           onClick={() => setIsCollapsed(false)}
           className="mx-auto mt-2 p-1.5 hover:bg-muted transition-colors"
         >
-          <ChevronLeft className="h-4 w-4 text-muted-foreground rotate-180" />
+          <CaretLeft className="h-4 w-4 text-muted-foreground rotate-180" />
         </button>
       )}
 

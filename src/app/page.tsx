@@ -1,7 +1,7 @@
 "use client"
 
-import Link from "next/link"
-import { Mail, Zap, BarChart, Clock, Settings, Users, ArrowRight, Check } from "lucide-react"
+import { LightningIcon, GearSixIcon , ClockIcon , UsersIcon ,EnvelopeSimpleIcon , ArrowRightIcon ,ChartLineIcon, CheckIcon} from "@phosphor-icons/react";
+
 import { Button } from "@/components/ui/button"
 import { ReactNode, useEffect } from "react"
 import { useUser } from "@clerk/nextjs";
@@ -46,7 +46,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-3 mb-12">
                 <Button size="lg" className="h-12 px-8">
                   Start automating
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRightIcon className="ml-2 h-4 w-4" />
                 </Button>
 
                 <Button
@@ -124,32 +124,32 @@ export default function Home() {
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Feature 
-              icon={<Zap className="h-5 w-5" />} 
+              icon={<LightningIcon className="h-5 w-5" />} 
               title="Instant delivery" 
               description="Send thousands of emails with low latency and high reliability."
             />
             <Feature 
-              icon={<Settings className="h-5 w-5" />} 
+              icon={<GearSixIcon className="h-5 w-5" />} 
               title="Easy integration" 
               description="Drop-in APIs and SDKs that fit directly into your stack."
             />
             <Feature 
-              icon={<Clock className="h-5 w-5" />} 
+              icon={<ClockIcon className="h-5 w-5" />} 
               title="Scheduled campaigns" 
               description="Plan, queue, and automate campaigns with precision timing."
             />
             <Feature 
-              icon={<BarChart className="h-5 w-5" />} 
+              icon={<ChartLineIcon className="h-5 w-5" />} 
               title="Detailed analytics" 
               description="Track opens, clicks, and delivery metrics in real time."
             />
             <Feature 
-              icon={<Users className="h-5 w-5" />} 
+              icon={<UsersIcon className="h-5 w-5" />} 
               title="Audience segmentation" 
               description="Send the right message to the right users at the right time."
             />
             <Feature 
-              icon={<Mail className="h-5 w-5" />} 
+              icon={<EnvelopeSimpleIcon className="h-5 w-5" />} 
               title="Transactional emails" 
               description="Password resets, OTPs, receipts, and system notifications."
             />
@@ -203,21 +203,21 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               <Button size="lg" className="h-12 px-8">
                 Get started for free
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRightIcon className="ml-2 h-4 w-4" />
               </Button>
             </div>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-primary" />
+                <CheckIcon className="h-4 w-4 text-primary" />
                 <span>No credit card required</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-primary" />
+                <CheckIcon className="h-4 w-4 text-primary" />
                 <span>Free tier available</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-primary" />
+                <CheckIcon className="h-4 w-4 text-primary" />
                 <span>Cancel anytime</span>
               </div>
             </div>
@@ -278,7 +278,7 @@ function Step({ step, title, description }: { step: string; title: string; descr
 function FeatureCheck({ text }: { text: string }) {
   return (
     <div className="flex items-center gap-3">
-      <Check className="h-4 w-4 text-primary flex-shrink-0" />
+      <CheckIcon className="h-4 w-4 text-primary flex-shrink-0" />
       <span className="text-sm text-muted-foreground">{text}</span>
     </div>
   )

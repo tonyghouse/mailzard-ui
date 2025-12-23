@@ -2,27 +2,20 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  LayoutDashboard,
-  FileStack,
-  CalendarClock,
-  AlertCircle,
-  ContactIcon,
-  BarChart3,
-  Cable,
-} from "lucide-react";
+import { House, Cards , Tray , CaretLeft, CalendarBlank ,WarningDiamond , AddressBook ,ChartLine, Plugs} from "@phosphor-icons/react";
+
 import { UserButton } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 
 const items = [
-  { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
-  { title: "Templates", url: "/templates", icon: FileStack },
-  { title: "Scheduled", url: "/scheduled-emails", icon: CalendarClock },
-  { title: "Failed", url: "/failed-emails", icon: AlertCircle },
-  { title: "Contacts", url: "/contacts", icon: ContactIcon },
-  { title: "Analytics", url: "/analytics", icon: BarChart3 },
-  { title: "Accounts", url: "/connect-accounts", icon: Cable },
+  { title: "Dashboard", url: "/dashboard", icon: House },
+  { title: "Templates", url: "/templates", icon: Cards },
+  { title: "Scheduled Emails", url: "/scheduled-emails", icon: CalendarBlank },
+  { title: "Failed Emails", url: "/failed-emails", icon: WarningDiamond },
+  { title: "Contacts", url: "/contacts", icon: AddressBook },
+  { title: "Analytics", url: "/analytics", icon: ChartLine },
+  { title: "Connect Accounts", url: "/connect-accounts", icon: Plugs },
 ];
 
 export function MobileBottomBar() {

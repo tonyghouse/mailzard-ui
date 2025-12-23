@@ -6,8 +6,8 @@ import { getPaginatedTemplatesApi } from "@/service/getPaginatedTemplates";
 import type { Template } from "@/model/Template";
 
 import { useAuth } from "@clerk/nextjs";
-import { Calendar, Loader2, AlertCircle, RefreshCw } from "lucide-react";
-
+// import { Calendar, Loader2, AlertCircle, RefreshCw } from "lucide-react";
+import { CalendarBlank, ArrowsClockwise , WarningCircle , Spinner ,WarningDiamond , AddressBook ,ChartLine, Plugs} from "@phosphor-icons/react";
 import { Pagination } from "@/components/generic/pagination";
 import TemplateCard from "@/components/templates/TemplateCard";
 
@@ -144,7 +144,7 @@ export default function TemplatesPage() {
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <Calendar className="w-5 h-5 text-primary" />
+                <CalendarBlank className="w-5 h-5 text-primary" />
               </div>
 
               <div>
@@ -164,7 +164,7 @@ export default function TemplatesPage() {
                   group"
                 title="Refresh templates"
               >
-                <RefreshCw 
+                <ArrowsClockwise 
                   className={`h-4 w-4 text-muted-foreground group-hover:text-foreground 
                     transition-all ${isRefreshing ? "animate-spin" : ""}`} 
                 />
@@ -179,7 +179,7 @@ export default function TemplatesPage() {
         {/* Error Alert */}
         {error && (
           <div className="mb-6 p-4 rounded-lg bg-destructive/10 text-destructive border border-destructive/20 flex gap-3 items-start">
-            <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+            <WarningCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
             <div className="flex-1">
               <p className="text-sm font-medium">{error}</p>
               <button
@@ -195,7 +195,7 @@ export default function TemplatesPage() {
         {/* Loading State */}
         {loading && templates.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20">
-            <Loader2 className="h-8 w-8 animate-spin text-primary mb-4" />
+            <Spinner className="h-8 w-8 animate-spin text-primary mb-4" />
             <p className="text-sm text-muted-foreground">Loading  templates...</p>
           </div>
         ) : templates.length > 0 ? (
@@ -220,7 +220,7 @@ export default function TemplatesPage() {
           /* Empty State */
           <div className="flex flex-col items-center justify-center py-20">
             <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center mb-4">
-              <Calendar className="w-8 h-8 text-muted-foreground" />
+              <CalendarBlank className="w-8 h-8 text-muted-foreground" />
             </div>
 
             <h3 className="text-lg font-semibold text-foreground mb-2">
