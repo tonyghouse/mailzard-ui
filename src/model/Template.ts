@@ -6,7 +6,6 @@ export interface Template {
   id: number;
   name: string;
   mjmlContent: string;
-  renderedHtml : string;
   type: TemplateType;
   userId?: string | null;
 }

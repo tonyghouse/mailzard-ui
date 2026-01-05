@@ -4,6 +4,7 @@ import { Outfit, Geist_Mono, Playfair_Display } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
 import { ClerkProvider } from "@clerk/nextjs";
+import ClientToaster from "@/components/generic/ClientToaster";
 
 /* Main UI font */
 const outfit = Outfit({
@@ -47,6 +48,7 @@ export default function RootLayout({
             playfair.variable
           )}
         >
+          <ClientToaster />
           {children}
         </body>
       </html>

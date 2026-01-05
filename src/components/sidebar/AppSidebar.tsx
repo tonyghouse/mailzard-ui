@@ -11,8 +11,7 @@ import { Badge } from "@/components/ui/badge";
 const items = [
   { title: "Dashboard", url: "/dashboard", icon: House },
   { title: "Templates", url: "/templates", icon: Cards },
-  { title: "Scheduled Emails", url: "/scheduled-emails", icon: CalendarBlank },
-  { title: "Failed Emails", url: "/failed-emails", icon: WarningDiamond },
+  { title: "Scheduled Campaigns", url: "/campaigns", icon: CalendarBlank },
   { title: "Contacts", url: "/contacts", icon: AddressBook },
   { title: "Analytics", url: "/analytics", icon: ChartLine },
   { title: "Connect Accounts", url: "/connect-accounts", icon: Plugs },

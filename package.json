@@ -31,9 +31,11 @@
     "mjml": "^4.18.0",
     "mjml-browser": "^4.18.0",
     "next": "15.0.7",
+    "next-themes": "^0.4.6",
     "react": "^18",
     "react-dom": "^18",
     "recharts": "^2.15.3",
+    "sonner": "^2.0.7",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
   },
