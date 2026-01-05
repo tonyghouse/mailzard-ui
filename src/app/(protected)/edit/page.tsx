@@ -8,6 +8,7 @@ import { getTemplateApi } from '@/service/getTemplate'
 import { Menu, X, Eye, Save, Monitor, Tablet, Smartphone, Plus, Loader2 } from 'lucide-react'
 import { createUserTemplateApi } from '@/service/saveUserTemplate'
 import { toast } from "sonner";
+import 'grapesjs/dist/css/grapes.min.css';
 
 export default function EditPage() {
   const searchParams = useSearchParams()
@@ -64,7 +65,7 @@ export default function EditPage() {
       const grapesjs = (await import('grapesjs')).default
       const grapesJsMjml = (await import('grapesjs-mjml')).default
       
-      await import('grapesjs/dist/css/grapes.min.css')
+      // await import('grapesjs/dist/css/grapes.min.css')
 
       editorRef.current = grapesjs.init({
         container: containerRef.current!,

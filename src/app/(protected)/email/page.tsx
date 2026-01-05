@@ -11,14 +11,9 @@ import { Calendar, Clock, Users, Send, Loader2, Eye, ArrowLeft } from 'lucide-re
 import { scheduleCampaignApi } from '@/service/scheduleCampaignApi'
 import { Campaign } from '@/model/Campaign'
 import { toast } from 'sonner'
+import { ContactGroup } from '@/model/ContactGroup' 
 
 
-interface ContactGroup {
-  id: number
-  name: string
-  description?: string
-  contactCount?: number
-}
 
 export default function EmailCampaignPage() {
   const searchParams = useSearchParams()
@@ -277,11 +272,11 @@ export default function EmailCampaignPage() {
                         {group.description && (
                           <div className="text-sm text-muted-foreground">{group.description}</div>
                         )}
-                        {group.contactCount !== undefined && (
+                        {/* {group.contactCount !== undefined && (
                           <div className="text-xs text-muted-foreground mt-1">
                             {group.contactCount} contacts
                           </div>
-                        )}
+                        )} */}
                       </div>
                     </label>
                   ))}
